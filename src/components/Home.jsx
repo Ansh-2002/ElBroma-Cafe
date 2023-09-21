@@ -4,6 +4,7 @@ import Hero from './sub-components/Hero';
 import Menu from './sub-components/Menu';
 import Gallery from './sub-components/Gallery';
 import Contact from './sub-components/Contact';
+import BookTable from './sub-components/BookTable';
 
 const home = () => {
     return (
@@ -11,10 +12,11 @@ const home = () => {
             <Navbar />
             <Hero />
             <Menu />
-            <Gallery />
+            <Gallery /> {/* about us */}   
+            <BookTable />
             <Contact />
             <Footer />
-        </>    
+        </ >
     );
     }
     export default home;

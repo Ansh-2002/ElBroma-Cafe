@@ -1,13 +1,42 @@
-import React, { useState,useEffect,useRef } from "react";
-import '../../css/search.css'
+import React, { useState, useEffect, useRef } from "react";
+import { bakery, food, beverages } from "../../menu-data";
+import{openDays, openTime, phone1} from "../constants"
+import "../../css/search.css";
 
-const Navbar = () => {  
-
-   const [isHeaderScrolled, setHeaderScrolled] = useState(false);
+const Navbar = () => {
+  const [isHeaderScrolled, setHeaderScrolled] = useState(false);
   const [isTopbarScrolled, setTopbarScrolled] = useState(false);
   const [isMobileNavVisible, setMobileNavVisible] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [searchItem, setSearchItem] = useState("");
+  const [filteredItems, setFilteredItems] = useState([]);
   const inputRef = useRef(null);
+
+  // Create an array that includes category and subCategory fields
+  const allData = [].concat(
+    ...bakery.map((item) =>
+      item.data.map((subItem) => ({
+        ...subItem,
+        category: "bakery",
+        subCategory: item.name,
+      }))
+    ),
+    ...food.map((item) =>
+      item.data.map((subItem) => ({
+        ...subItem,
+        category: "food",
+        subCategory: item.name,
+      }))
+    ),
+    ...beverages.map((item) =>
+      item.data.map((subItem) => ({
+        ...subItem,
+        category: "beverages",
+        subCategory: item.name,
+      }))
+    )
+  );
+  // console.log(allData);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,107 +50,156 @@ const Navbar = () => {
     };
 
     // Add event listener for scroll
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Remove event listener when the component unmounts
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const toggleMobileNav = () => {
     setMobileNavVisible(!isMobileNavVisible);
   };
+
   const handleSearchActive = () => {
     setIsSearchActive(!isSearchActive);
     if (!isSearchActive && inputRef.current) {
-        inputRef.current.focus();
-      }
-    };
+      inputRef.current.focus();
+    }
+  };
+
+  const handleSearchChange = (e) => {
+    const searchValue = e.target.value;
+    setSearchItem(searchValue);
+
+    const filtered = allData.filter((item) =>
+      item.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+
+    setFilteredItems(filtered);
+  };
 
   return (
     <>
       <section
         id="topbar"
         className={`d-flex align-items-center fixed-top topbar-transparent ${
-          isTopbarScrolled ? 'topbar-scrolled' : ''
+          isTopbarScrolled ? "topbar-scrolled" : ""
         }`}
       >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
-          <i className="bi bi-phone d-flex align-items-center">
-            <span>+91 1234 56789</span>
-          </i>
-          <i className="bi bi-clock ms-4 d-none d-lg-flex align-items-center">
-            <span>Mon-Sat: 11:00 AM - 23:00 PM</span>
-          </i>
+          {/* Topbar content */}
+          <i class="bi bi-phone d-flex align-items-center"
+          ><span>{phone1}</span></i
+        >
+        <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"
+          ><span>{openDays}  {openTime}</span></i
+        >
         </div>
       </section>
 
-  
-        <header id="header" className={`fixed-top d-flex align-items-center header-transparent ${isHeaderScrolled ? 'header-scrolled' : ''}`}>
-            <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-                <div className="logo me-auto">
-                <h1 className="alex-font"><a href="/"><b>El Broma</b></a></h1>
-                </div>
+      <header
+        id="header"
+        className={`fixed-top d-flex align-items-center header-transparent ${
+          isHeaderScrolled ? "header-scrolled" : ""
+        }`}
+      >
+        <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
+          <div className="logo me-auto">
+            <h1 className="alex-font pt-4 mb-0">
+              <a href="/">
+                <b>El Broma</b>
+              </a>
+            </h1>
+            <i>
+              <p className="arimo-font"
+              >A little bliss in every bite</p>
+              </i>
+          </div>
 
-                <nav
-                    id="navbar"
-                    className={`navbar order-last order-lg-0 ${isMobileNavVisible ? "navbar-mobile" : ""}`}
-                >   
-                      <div className="searchbar">
-                        <input 
-                            type="text" 
-                            placeholder="search"
-                            className={` ${isSearchActive ? "active" : ""}`}
-                            ref={inputRef} 
-                            />
-                        <div className="icon">
-                            <i className={`bi bi-search ${isSearchActive ? "active" : ""}`} onClick= {handleSearchActive}></i>
-                        </div>
+          <nav
+            id="navbar"
+            className={`navbar order-last order-lg-0 ${
+              isMobileNavVisible ? "navbar-mobile" : ""
+            }`}
+          >
+            <div className="searchbar">
+              <input
+                type="text"
+                placeholder="Search"
+                className={` ${isSearchActive ? "active" : ""}`}
+                ref={inputRef}
+                value={searchItem}
+                onChange={(e) => handleSearchChange(e)}
+              />
+              <div className="icon">
+                <i
+                  className={`bi bi-search ${isSearchActive ? "active" : ""}`}
+                  onClick={handleSearchActive}
+                ></i>
+              </div>
+
+              <div className="result-list">
+              {filteredItems.map((item) => {
+                return(
+                  searchItem &&
+                  <div key={item.uuid}>
+                    {/* <a href={`/menu?category=${item.category}&subcategory=${item.subCategory}&name=${item.name}`} > */}
+                    <a href={`/menu?category=${item.category}&subcategory=${item.subCategory}&name=${item.name}`} >
+                       {item.name}
+                    </a>
                     </div>
+                  )
+              })}
 
-                    <ul >
-                    <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-                    {/* <li><a className="nav-link scrollto" href="#about">About</a></li> */}
-                    <li><a className="nav-link scrollto" href="/menu">Menu</a></li>
+              </div>
+            </div>
 
-                    <li><a className="nav-link scrollto" href="#gallery">Gallery</a></li>
-                    {/* <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
-                        <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
-                            <ul>
-                            <li><a href="#">Deep Drop Down 1</a></li>
-                            <li><a href="#">Deep Drop Down 2</a></li>
-                            <li><a href="#">Deep Drop Down 3</a></li>
-                            <li><a href="#">Deep Drop Down 4</a></li>
-                            <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li> */}
-                    <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-                    </ul>
-                        <i
-                            className={`bi bi-list mobile-nav-toggle ${isMobileNavVisible ? "bi-x" : "bi-list"}`}
-                            onClick={toggleMobileNav}
-                        ></i>
-                    {/* <div className="book-a-table-btn scrollto">
-                        <i class="bi bi-search"></i>
-                        ...
-                        < input 
-                        style={{width: "200px", height: "30px", borderRadius: "10px", border: "1px solid #ccc", padding: "5px"}}
-                        />
-                    </div> */}
-                  
-                    
+            <ul onClick={isMobileNavVisible ? toggleMobileNav : undefined}>
+              <li>
+                <a className="nav-link scrollto active" href="#hero">
+                  Home
+                </a>
+              </li>
+              {/* <li><a className="nav-link scrollto" href="#about">About</a></li> */}
+              <li>
+                <a className="nav-link scrollto" href="/menu">
+                  Menu
+                </a>
+              </li>
 
-                    </nav>
-                </div>
-            </header>
-      </>
-    );
-    }
+              <li>
+                <a className="nav-link scrollto" href="#gallery">
+                  {/* Gallery */}
+                  About Us
+                </a>
+              </li>
+
+              <li>
+                <a className="nav-link scrollto" href="#contact">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <i
+              className={`bi bi-list mobile-nav-toggle ${
+                isMobileNavVisible ? "bi-x" : "bi-list"
+              }`}
+              onClick={toggleMobileNav}
+            ></i>
+          </nav>
+        </div>
+      </header>
+
+      {/* Display filtered items
+      <div className="filtered-items">
+        {filteredItems.map((item) => (
+          <div key={item.id}>{item.name}</div>
+        ))}
+      </div> */}
+    </>
+  );
+};
+
 export default Navbar;

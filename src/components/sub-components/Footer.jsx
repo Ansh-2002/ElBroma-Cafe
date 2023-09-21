@@ -3,7 +3,7 @@ const footer = () => {
         <>
             <footer id="footer">
                 <div className="container">
-                <h3>El Broma</h3>
+                <h3 className="alex-font">El Broma</h3>
                 <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
                 <div className="social-links">
                     <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
@@ -13,7 +13,7 @@ const footer = () => {
                     <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                 </div>
                 <div className="copyright">
-                    &copy; Copyright <strong><span>El Broma</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span className="alex-font">El Broma</span></strong>. All Rights Reserved
                 </div>
                 
                 </div>

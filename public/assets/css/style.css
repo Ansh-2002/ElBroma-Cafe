@@ -9,6 +9,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+:root {
+  --primary: #DAC0A3;
+  --white: #faf0e6;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #444444;
@@ -16,7 +22,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 a:hover {
@@ -32,8 +38,11 @@ h5,
 h6 {
   font-family: "Satisfy", sans-serif;
 }
-.alex-font{
-  font-family: 'Alex Brush', cursive;
+.alex-font {
+  font-family: "Alex Brush", cursive;
+}
+.arimo-font{
+  font-family: 'Arimo', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -46,7 +55,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ffb03b;
+  background: var(--primary);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -91,7 +100,7 @@ h6 {
 }
 
 #topbar i {
-  color: #ffb03b;
+  color: var(--primary);
   line-height: 0;
 }
 
@@ -146,7 +155,7 @@ h6 {
 # Book a table button Menu
 --------------------------------------------------------------*/
 .book-a-table-btn {
-  background: #ffb03b;
+  background: var(--primary);
   color: #fff;
   border-radius: 50px;
   margin: 0 0 0 20px;
@@ -216,8 +225,8 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
-  color: #ffb03b;
+.navbar li:hover > a {
+  color: var(--primary);
 }
 
 .navbar .dropdown ul {
@@ -253,11 +262,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #ffb03b;
+.navbar .dropdown ul li:hover > a {
+  color: var(--primary);
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -269,7 +278,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -281,7 +290,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -349,8 +358,8 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #ffb03b;
+.navbar-mobile li:hover > a {
+  color: var(--primary);
 }
 
 .navbar-mobile .getstarted,
@@ -384,11 +393,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #ffb03b;
+.navbar-mobile .dropdown ul li:hover > a {
+  color: var(--primary);
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -444,7 +453,7 @@ h6 {
 }
 
 #hero h2 span {
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 #hero p {
@@ -523,12 +532,13 @@ h6 {
   margin: 0 10px;
   animation-delay: 0.8s;
   color: #fff;
-  border: 2px solid #ffb03b;
+  border: 2px solid var(--primary);
+  /* width: 192px; */
 }
 
 #hero .btn-menu:hover,
 #hero .btn-book:hover {
-  background: #ffb03b;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -573,7 +583,7 @@ section {
 }
 
 .section-title h2 span {
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 .section-title p {
@@ -624,11 +634,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -682,7 +692,7 @@ section {
   padding: 0;
 }
 
-.about .content ul li+li {
+.about .content ul li + li {
   margin-top: 15px;
 }
 
@@ -693,7 +703,7 @@ section {
 
 .about .content ul i {
   font-size: 20px;
-  color: #ffb03b;
+  color: var(--primary);
   position: absolute;
   left: 0;
   top: 2px;
@@ -714,7 +724,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(#ffb03b 50%, rgba(255, 176, 59, 0.4) 52%);
+  background: radial-gradient(var(--primary) 50%, rgba(255, 176, 59, 0.4) 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -757,7 +767,7 @@ section {
 }
 
 .about .play-btn:hover::after {
-  border-left: 15px solid #ffb03b;
+  border-left: 15px solid var(--primary);
   transform: scale(20);
 }
 
@@ -779,7 +789,6 @@ section {
 }
 
 @media (max-width: 1024px) {
-
   .about .content,
   .about .accordion-list {
     padding-left: 0;
@@ -842,7 +851,7 @@ section {
 }
 
 .why-us .box:hover {
-  background: #ffb03b;
+  background: var(--primary);
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -875,14 +884,14 @@ section {
   margin: 0 3px 10px 3px;
   transition: all ease-in-out 0.3s;
   background: #fff;
-  border: 2px solid #ffb03b;
+  border: 2px solid #DAC0A3;
   border-radius: 50px;
 }
 
 .menu #menu-flters li:hover,
 .menu #menu-flters li.filter-active {
   color: #fff;
-  background: #ffb03b;
+  background: #DAC0A3;
 }
 
 .menu #menu-flters li:last-child {
@@ -898,7 +907,9 @@ section {
 }
 
 .menu .menu-content::after {
-  content: "......................................................................" "...................................................................." "....................................................................";
+  content: "......................................................................"
+    "...................................................................."
+    "....................................................................";
   position: absolute;
   left: 20px;
   right: 0;
@@ -914,7 +925,7 @@ section {
   position: relative;
   z-index: 3;
   font-weight: 700;
-  color: #ff9b08;
+  color: #DAC0A3;
 }
 
 .menu .menu-content span {
@@ -933,19 +944,22 @@ section {
   display: flex;
 }
 .menu-img {
-	width: 70px;
-	height: 70px;
-	float: left;
-	margin-top: -5px;
-	margin-right: 5px;
-	border: 5px solid rgba(255, 255, 255, 0.2);
-	border-radius: 50%;
-	overflow: hidden; /* Hide anything outside the circle */
-	object-fit: cover; /* Maintain aspect ratio and cover the entire circle */
-  }
-  .menu-item{
-	min-height: 60px;
-  }
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-top: -5px;
+  margin-right: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  overflow: hidden; /* Hide anything outside the circle */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire circle */
+}
+.menu-item {
+  min-height: 60px;
+}
+.menu-content span{
+  color:#DAC0A3;
+}
 /*--------------------------------------------------------------
 # Specials
 --------------------------------------------------------------*/
@@ -969,12 +983,12 @@ section {
 }
 
 .specials .nav-link:hover {
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 .specials .nav-link.active {
-  color: #ffb03b;
-  border-color: #ffb03b;
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .specials .tab-pane.active {
@@ -1004,7 +1018,7 @@ section {
 
   .specials .nav-link.active {
     color: #fff;
-    background: #ffb03b;
+    background: var(--primary);
   }
 }
 
@@ -1053,7 +1067,7 @@ section {
 .events .event-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 .events .event-item .price {
@@ -1064,7 +1078,7 @@ section {
 }
 
 .events .event-item .price span {
-  border-bottom: 2px solid #ffb03b;
+  border-bottom: 2px solid var(--primary);
 }
 
 .events .event-item ul {
@@ -1079,7 +1093,7 @@ section {
 .events .event-item ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 .events .event-item p:last-child {
@@ -1099,7 +1113,7 @@ section {
 }
 
 .events .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffb03b;
+  background-color: var(--primary);
 }
 
 /*--------------------------------------------------------------
@@ -1133,7 +1147,7 @@ section {
   font-weight: 600;
 }
 
-.book-a-table .php-email-form .error-message br+br {
+.book-a-table .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1180,8 +1194,8 @@ section {
   padding: 10px 12px;
 }
 
-.book-a-table .php-email-form button[type=submit] {
-  background: #ffb03b;
+.book-a-table .php-email-form button[type="submit"] {
+  background: var(--primary);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1189,7 +1203,7 @@ section {
   border-radius: 50px;
 }
 
-.book-a-table .php-email-form button[type=submit]:hover {
+.book-a-table .php-email-form button[type="submit"]:hover {
   background: #ffa012;
 }
 
@@ -1300,7 +1314,7 @@ section {
 }
 
 .chefs .member .social a:hover {
-  color: #ffb03b;
+  color: var(--primary);
 }
 
 .chefs .member .social i {
@@ -1378,7 +1392,7 @@ section {
 }
 
 .testimonials .testimonial-item .stars {
-  color: #ffb03b;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
@@ -1420,7 +1434,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffb03b;
+  background-color: var(--primary);
 }
 
 @media (min-width: 992px) {
@@ -1443,7 +1457,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #ffb03b;
+  color: var(--primary);
   float: left;
   width: 44px;
   height: 44px;
@@ -1472,7 +1486,7 @@ section {
 }
 
 .contact .info:hover i {
-  background: #ffb03b;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -1539,8 +1553,8 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
-  background: #ffb03b;
+.contact .php-email-form button[type="submit"] {
+  background: var(--primary);
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1548,7 +1562,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #ffa012;
 }
 
@@ -1576,7 +1590,7 @@ section {
 #footer h3 {
   font-size: 36px;
   font-weight: 700;
-  color: #ffb03b;
+  color: var(--primary);
   position: relative;
   padding: 0;
   margin: 0 0 15px 0;
@@ -1609,7 +1623,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #ffb03b;
+  background: var(--primary);
 }
 
 #footer .copyright {
@@ -1619,3 +1633,46 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+.sent-message,
+.error-message {
+  display: none;
+  color: #4caf50; /* Green color for success message */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+.specials-img{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@media (max-width: 991px) {
+  /* Your mobile-specific CSS styles go here */
+  .specials-img{
+    border-radius: 50%;
+    width:200px;
+    height: 200px;
+  }
+
+  .specials .details h3 {
+   margin-top:20px;
+    font-size:23px;
+    text-align: center;
+  }
+  
+}
+/* .details{
+  display: none;
+} */
+div.logo p.arimo-font{
+  font-size: 0.7rem;
+  color: var(--primary);
+  margin-top:-4px;
+}
+ 

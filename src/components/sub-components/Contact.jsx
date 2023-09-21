@@ -1,4 +1,60 @@
-const contact = () => {
+import React, {useRef} from "react";
+import emailjs from '@emailjs/browser';
+import { email, openDays, openTime, phone1 ,phone2} from "../constants";
+
+const Contact = () => {
+
+  const form = useRef();
+ 
+  const sendEmail = (e) => {
+    e.preventDefault();
+  
+    // Display the loading message
+    document.querySelector('.loading').style.display = 'block';
+  
+    emailjs
+      .sendForm('service_6iu0gbq', 'template_bqn6umc', form.current, '1hBFvLTWkB4DNAtt2')
+      .then((result) => {
+        console.log(result.text);
+        // Display the success message
+        const successMessage = document.querySelector('.sent-message');
+        successMessage.style.display = 'block';
+  
+        // Apply the fade-out animation to the success message
+        setTimeout(() => {
+          successMessage.classList.add('fade-out');
+        }, 5000);
+  
+        // Hide the success message after the animation completes
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+          successMessage.classList.remove('fade-out');
+        }, 5500);
+      })
+      .catch((error) => {
+        console.error(error);
+        // Display the error message
+        const errorMessage = document.querySelector('.error-message');
+        errorMessage.style.display = 'block';
+  
+        // Apply the fade-out animation to the error message
+        setTimeout(() => {
+          errorMessage.classList.add('fade-out');
+        }, 5000);
+  
+        // Hide the error message after the animation completes
+        setTimeout(() => {
+          errorMessage.style.display = 'none';
+          errorMessage.classList.remove('fade-out');
+        }, 5500);
+      })
+      .finally(() => {
+        // Hide the loading message
+        document.querySelector('.loading').style.display = 'none';
+      });
+  };
+
+
     return (
         <>
             <section id="contact" className="contact">
@@ -36,30 +92,33 @@ const contact = () => {
             <div className="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i className="bi bi-clock"></i>
               <h4>Open Hours:</h4>
-              <p>Monday-Sunday:<br/>8:00 AM - 11:00 PM</p>
+              <p>{openDays}<br/>{openTime}</p>
             </div>
 
             <div className="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i className="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com<br/>contact@example.com</p>
+              <p>{email}<br/>
+              {/* contact@example.com */}
+              </p>
             </div>
 
             <div className="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i className="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+91 1234567890<br/>+91 1234567890</p>
+              <p>{phone1}<br/>{phone2}</p>
             </div>
           </div>
         </div>
 
-        <form action="forms/contact.php" method="post" role="form" className="php-email-form">
+        <form ref={form} onSubmit={sendEmail} className="php-email-form">
           <div className="row">
             <div className="col-md-6 form-group">
-              <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required />
+              <input type="text" name="user_name" className="form-control" id="name" placeholder="Your Name" required />
             </div>
             <div className="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" className="form-control" name="email" id="email" placeholder="Your Email" required />
+              <input type="email" className="form-control" name="user_email"  id="email" placeholder="Your Email" required
+               />
             </div>
           </div>
           <div className="form-group mt-3">
@@ -70,7 +129,7 @@ const contact = () => {
           </div>
           <div className="my-3">
             <div className="loading">Loading</div>
-            <div className="error-message"></div>
+            <div className="error-message">Their was an error. Plese try again later</div>
             <div className="sent-message">Your message has been sent. Thank you!</div>
           </div>
           <div className="text-center"><button type="submit">Send Message</button></div>
@@ -81,4 +140,4 @@ const contact = () => {
         </>
     );
 }
-export default contact;
+export default Contact;
