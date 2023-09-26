@@ -5,6 +5,7 @@ import Menu from './sub-components/Menu';
 import Gallery from './sub-components/Gallery';
 import Contact from './sub-components/Contact';
 import BookTable from './sub-components/BookTable';
+import PrivateDining from './sub-components/PrivateDining';
 
 const home = () => {
     return (
@@ -12,7 +13,8 @@ const home = () => {
             <Navbar />
             <Hero />
             <Menu />
-            <Gallery /> {/* about us */}   
+            <Gallery /> {/* about us */}  
+            <PrivateDining/> 
             <BookTable />
             <Contact />
             <Footer />
