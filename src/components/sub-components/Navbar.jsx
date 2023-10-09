@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { bakery, food, beverages } from "../../menu-data";
-import{openDays, openTime, phone1} from "../constants"
+import { bakery, food, beverages,onWheels } from "../../menu-data";
+import{openDays, openTime, phone1, phone2} from "../constants"
 import "../../css/search.css";
 
 const Navbar = () => {
@@ -25,6 +25,13 @@ const Navbar = () => {
       item.data.map((subItem) => ({
         ...subItem,
         category: "food",
+        subCategory: item.name,
+      }))
+    ),
+    ...onWheels.map((item) =>
+      item.data.map((subItem) => ({
+        ...subItem,
+        category: "onWheels",
         subCategory: item.name,
       }))
     ),
@@ -90,12 +97,13 @@ const Navbar = () => {
       >
         <div className="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
           {/* Topbar content */}
-          <i class="bi bi-phone d-flex align-items-center"
-          ><span>{phone1}</span></i
-        >
-        <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"
-          ><span>{openDays}  {openTime}</span></i
-        >
+          <i className="bi bi-phone d-flex align-items-center me-3"
+          ><span>{phone1}</span></i>
+        
+          <i className="bi bi-phone d-flex align-items-center "
+          ><span>{phone2}</span></i>
+        <i className="bi bi-clock ms-4 d-none d-lg-flex align-items-center"
+          ><span>{openDays}  {openTime}</span></i>
         </div>
       </section>
 
@@ -170,7 +178,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a className="nav-link scrollto" href="#gallery">
+                <a className="nav-link scrollto" href="#about-us">
                   {/* Gallery */}
                   About Us
                 </a>

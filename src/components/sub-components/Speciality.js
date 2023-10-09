@@ -7,10 +7,10 @@ const Speciality = () => {
         <div className="container">
           <div className="section-title">
             <h2>Check our <span>Specials</span></h2>
-            <p>
+            {/* <p>
               Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
               adipisci expedita at voluptas atque vitae autem.
-            </p>
+            </p> */}
           </div>
 
           <div className="row">

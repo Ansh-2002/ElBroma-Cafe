@@ -57,10 +57,10 @@ const BookTable = () => {
         <div className="container">
           <div className="section-title">
             <h2>Book a <span>Table</span></h2>
-            <p>
+            {/* <p>
               Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
               adipisci expedita at voluptas atque vitae autem.
-            </p>
+            </p> */}
           </div>
 
           <form
@@ -82,7 +82,7 @@ const BookTable = () => {
                 />
                 <div className="validate"></div>
               </div>
-              <div className="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              {/* <div className="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
                 <input
                   type="email"
                   className="form-control"
@@ -93,7 +93,7 @@ const BookTable = () => {
                   data-msg="Please enter a valid email"
                 />
                 <div className="validate"></div>
-              </div>
+              </div> */}
               <div className="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
                 <input
                   type="text"
@@ -103,7 +103,7 @@ const BookTable = () => {
                   placeholder="Your Phone"
                   data-rule="minlen:4"
                   data-msg="Please enter at least 4 chars"
-                  onFocus="(this.type='date')"
+                  // onFocus="(this.type='date')"
               
                   required
                 />

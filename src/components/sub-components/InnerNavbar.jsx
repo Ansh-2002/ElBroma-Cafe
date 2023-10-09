@@ -95,7 +95,7 @@
 // export default InnerNavbar;
 
 import React, { useState, useEffect, useRef } from "react";
-import { bakery, food, beverages } from "../../menu-data";
+import { bakery, food, beverages,onWheels } from "../../menu-data";
 import "../../css/search.css";
 
 const Navbar = () => {
@@ -120,6 +120,13 @@ const Navbar = () => {
       item.data.map((subItem) => ({
         ...subItem,
         category: "food",
+        subCategory: item.name,
+      }))
+    ),
+    ...onWheels.map((item) =>
+      item.data.map((subItem) => ({
+        ...subItem,
+        category: "onWheels",
         subCategory: item.name,
       }))
     ),
@@ -254,14 +261,14 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a className="nav-link scrollto" href="/">
+                <a className="nav-link scrollto" href="/#about-us">
                   {/* Gallery */}
                   About Us
                 </a>
               </li>
 
               <li>
-                <a className="nav-link scrollto" href="/">
+                <a className="nav-link scrollto" href="/#contact">
                   Contact
                 </a>
               </li>

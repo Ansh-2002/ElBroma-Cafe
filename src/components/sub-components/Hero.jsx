@@ -26,12 +26,15 @@ const hero = () => {
                       <span className="alex-font"> El Broma</span> Bakery & Cafe
                     </h2>
                     <p className="arimo-font mt-0">
-                      <i>
-                      A little bliss in every bite
-                      </i>
+                      <i>A little bliss in every bite</i>
                     </p>
                     <p className="animate__animated animate__fadeInUp">
-                     From golden, flaky croissants to finger licking pasta to thick oreo shake to rich, velvety cakes, each item is a labor of love. We believe in the power of quality ingredients and meticulous craftsmanship to deliver flavors that linger in your memory long after the last bite
+                      From golden, flaky croissants to aromatic coffees to finger licking pasta to
+                      thick oreo shake to rich, velvety cakes, each item is a
+                      labor of love. We believe in the power of quality
+                      ingredients and meticulous craftsmanship to deliver
+                      flavors that linger in your memory long
+                      after the last bite
                     </p>
                     {/* <div>
                   <a href="#menu" className="btn-menu animate__animated animate__fadeInUp scrollto">Our Cafe Menu</a>
@@ -74,7 +77,7 @@ const hero = () => {
                           </div>
                           <div className="btn-group">
                             <a
-                              href="#book-a-table"
+                              href="#private-dining"
                               className="btn btn-book animate__animated animate__fadeInUp scrollto mt-3"
                             >
                               Private Dining

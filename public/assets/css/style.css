@@ -1071,13 +1071,13 @@ section {
 }
 
 .events .event-item .price {
-  font-size: 26px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  margin-bottom: 15px;
+  /* font-size: 26px; */
+  /* font-family: "Poppins", sans-serif; */
+  /* font-weight: 700; */
+  /* margin-bottom: 15px; */
 }
 
-.events .event-item .price span {
+.events .event-item .price  {
   border-bottom: 2px solid var(--primary);
 }
 
@@ -1448,7 +1448,7 @@ section {
 --------------------------------------------------------------*/
 .contact .info-wrap {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 30px 0 30px 30px;
 }
 
 .contact .info {
@@ -1665,7 +1665,9 @@ section {
     font-size:23px;
     text-align: center;
   }
-  
+  .btn-group{
+    display: block;
+  }
 }
 /* .details{
   display: none;

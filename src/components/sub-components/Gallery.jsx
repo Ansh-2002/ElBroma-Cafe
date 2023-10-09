@@ -3,7 +3,7 @@ import Album from "./Album";
 const gallery = () => {
   return (
     <>
-      <section id="gallery" className="gallery">
+      <section id="about-us" className="gallery" style={{paddingTop:"0"}}>
         <div className="container-fluid">
           <div className="section-title">
             <h2>
@@ -11,20 +11,20 @@ const gallery = () => {
               <span> About </span> Us{" "}
             </h2>
             <p>
-              Welcome to El Broma, where the artistry of baking and the warmth
+              Welcome to El Broma & Cafe, where the artistry of baking and the warmth
               of community converge to create an unforgettable culinary
               experience. Nestled in the heart of Gurugram, our establishment
-              is a haven for those who cherish the simple pleasures of life:
+              is a heaven  for those who cherish the simple pleasures of life:
               delectable pastries, aromatic coffee, mouth-watering food, and the
               joy of shared moments.
             </p>
-            <p>
+            {/* <p>
               From golden, flaky croissants to finger licking pasta to thick
               oreo shake to rich, velvety cakes, each item is a labor of love.
               We believe in the power of quality ingredients and meticulous
               craftsmanship to deliver flavors that linger in your memory long
               after the last bite
-            </p>
+            </p> */}
           </div>
 
           {/* <div className="row g-0">
@@ -144,7 +144,7 @@ const gallery = () => {
         </div>
 
       </section>
-      <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1600px', margin: '0 auto 35px 0' }}>
   <Album />
 </div>
 

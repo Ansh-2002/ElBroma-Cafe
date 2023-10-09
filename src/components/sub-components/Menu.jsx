@@ -7,7 +7,7 @@ const menu = () => {
       <div className="container">
 
         <div className="section-title">
-          <h2>Check our tasty <span>Menu</span></h2>
+          <h2>Check our Scrumptious <span>Menu</span></h2>
         </div>
 
         {/* <div className="row">
@@ -131,7 +131,7 @@ const menu = () => {
         <div className="col-lg-4 col-md-6 col-sm-6">
             <div className="service-item">
                 <a href="/menu?category=beverages">
-                    <img src="assets/img/drinks.png" alt="Breakfast" />
+                    <img src="assets/img/drinks.webp" alt="Breakfast" />
                     <h4>Beverages</h4>
                 </a>
             </div>
@@ -142,6 +142,14 @@ const menu = () => {
                 <a href="/menu?category=food">
                     <img src="assets/img/cook_dinner.png" alt="Dinner" />
                     <h4>Food</h4>
+                </a>
+            </div>
+        </div>
+        <div className="col-lg-4 col-md-6 col-sm-6">
+            <div className="service-item">
+                <a href="/menu?category=onWheels">
+                    <img src="assets/img/onWheels.jpeg" alt="Dinner" />
+                    <h4>On Wheels Menu</h4>
                 </a>
             </div>
         </div>

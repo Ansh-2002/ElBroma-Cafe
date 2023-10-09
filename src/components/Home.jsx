@@ -13,9 +13,9 @@ const home = () => {
             <Navbar />
             <Hero />
             <Menu />
+            <BookTable />
             <Gallery /> {/* about us */}  
             <PrivateDining/> 
-            <BookTable />
             <Contact />
             <Footer />
         </ >
