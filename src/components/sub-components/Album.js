@@ -78,19 +78,19 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 const photos = [
-  { src: "assets/img/gallery/gallery-1.jpg", width: 1040, height: 468 },
-  { src: "assets/img/gallery/gallery-2.jpg", width: 1280, height: 720 },
-  { src: "assets/img/gallery/gallery-3.jpg", width: 960, height: 1280 },
-  { src: "assets/img/gallery/gallery-4.jpg", width: 1280, height: 720 },
-  { src: "assets/img/gallery/gallery-5.jpg", width: 1280, height: 720 },
-  { src: "assets/img/gallery/gallery-6.jpg", width: 1200, height: 1600 },
-  { src: "assets/img/gallery/gallery-7.jpg", width: 960, height: 1280 },
-  { src: "assets/img/gallery/gallery-8.jpg", width: 960, height: 1600 },
-  { src: "assets/img/gallery/gallery-9.jpg", width: 768, height: 1024 },
-  { src: "assets/img/gallery/gallery-10.jpg", width: 768, height: 1024 },
-  { src: "assets/img/gallery/gallery-11.jpg", width: 1024, height: 682 },
-  { src: "assets/img/gallery/gallery-12.jpg", width: 1024, height: 682 },
-  { src: "assets/img/gallery/gallery-13.jpg", width: 1024, height: 682 },
+  { src: "assets/img/gallery/gallery-1.jpg", alt: "El broma bakery and cafe from outside", width: 1040, height: 468 },
+  { src: "assets/img/gallery/gallery-2.jpg", alt: "resturant tables and chair", width: 1280, height: 720 },
+  { src: "assets/img/gallery/gallery-3.jpg", alt: "Egg sandwich with coffee", width: 960, height: 1280 },
+  { src: "assets/img/gallery/gallery-4.jpg", alt: "bakery interior with furniture", width: 1280, height: 720 },
+  { src: "assets/img/gallery/gallery-5.jpg", alt: "cafe's swinging chair", width: 1280, height: 720 },
+  { src: "assets/img/gallery/gallery-6.jpg", alt: "ref velvet cake", width: 1200, height: 1600 },
+  { src: "assets/img/gallery/gallery-7.jpg", alt: "chocolate mouse with plant in background", width: 960, height: 1280 },
+  { src: "assets/img/gallery/gallery-8.jpg", alt: "desert served outside cafe", width: 960, height: 1600 },
+  { src: "assets/img/gallery/gallery-9.jpg", alt: "chocolate muffin", width: 768, height: 1024 },
+  { src: "assets/img/gallery/gallery-10.jpg", alt: "two chocolate and two vanilla muffins", width: 768, height: 1024 },
+  { src: "assets/img/gallery/gallery-11.jpg", alt: "pasta served with garlic bread", width: 1024, height: 682 },
+  { src: "assets/img/gallery/gallery-12.jpg", alt: "our special burger served with fries", width: 1024, height: 682 },
+  { src: "assets/img/gallery/gallery-13.jpg" ,alt: "grilled chicken sandwich with french fries", width: 1024, height: 682 },
 ];
 
 export default function Gallery() {

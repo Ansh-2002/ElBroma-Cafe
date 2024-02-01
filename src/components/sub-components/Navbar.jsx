@@ -91,7 +91,7 @@ const Navbar = () => {
     <>
       <section
         id="topbar"
-        className={`d-flex align-items-center fixed-top topbar-transparent ${
+        className={`d-flex align-items-center fixed-top  ${
           isTopbarScrolled ? "topbar-scrolled" : ""
         }`}
       >
@@ -109,7 +109,7 @@ const Navbar = () => {
 
       <header
         id="header"
-        className={`fixed-top d-flex align-items-center header-transparent ${
+        className={`fixed-top d-flex align-items-center  ${
           isHeaderScrolled ? "header-scrolled" : ""
         }`}
       >

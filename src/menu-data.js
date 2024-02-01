@@ -78,6 +78,27 @@ const bakery = [
         uuid: uuid4(),
       },
       {
+        name: "Vanilla Choco Chip Tea Cake",
+        price: 289,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/TeaCakes/vanilaChocoChipTeacake.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Rum Raisin Tea Cake",
+        price: 319,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/TeaCakes/rumRaisinTeaCake.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Lemon Tea Cake",
+        price: 319,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/TeaCakes/lemonteacake.jpeg",
+        uuid: uuid4(),
+      },
+      {
         name: "Marble Tea Cake",
         price: 269,
         // description: "Espresso shot mixed with ice",
@@ -154,8 +175,8 @@ const bakery = [
         uuid: uuid4(),
       },
       {
-        name: "Red Velvet",
-        price: 550,
+        name: "Red Velvet Pastry",
+        price: 249,
         // description: "Espresso with milk foam",
         image: "/assets/img/menu/bakery/Pastry/redVelvet.jpeg",
         uuid: uuid4(),
@@ -169,14 +190,14 @@ const bakery = [
       // },
       {
         name: "BlueBerry Cheese Cake",
-        price: 249,
+        price: 279,
         // description: "Espresso with milk foam",
         image: "/assets/img/menu/bakery/Pastry/blueBerryCheeseCake.jpeg",
         uuid: uuid4(),
       },
       {
         name: "Biscoff Cheese Cake",
-        price: 550,
+        price: 279,
         // description: "Espresso with milk foam",
         image: "/assets/img/menu/bakery/Pastry/BiscoffCheesepastry.jpeg",
         uuid: uuid4(),
@@ -226,6 +247,83 @@ const bakery = [
     ],
   },
   {
+    name: "Cakes",
+    uuid: uuid4(),
+    data: [
+      
+      {
+        name: "Chocolate Truffle Cake (500gm)",
+        price: 550,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/chocolateTruffle.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Red Velvet Cake (500gm)",
+        price: 550,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/redVelvet.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Soft Truffle Cake (500gm)",
+        price: 500,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/cakes/softTruffle.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Black Forest cake (500gm)",
+        price: 500,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/cakes/blackForest.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Tiramisu Cake (500gm)",
+        price: 500,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/tiramisuCake.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Pineapple Cake (500gm)",
+        price: 500,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/pineapple.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Fresh Fruit Cake (500gm)",
+        price: 650,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/cakes/freshFruit.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Butterscotch Cake (500gm)",
+        price: 520,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/butterscotch.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Blueberry Cake (500gm)",
+        price: 550,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/blueberry.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Choco Vanilla Cake (500gm)",
+        price: 520,
+        // description: "Espresso with milk foam",
+        image: "/assets/img/menu/bakery/cakes/chocoVanila.jpeg",
+        uuid: uuid4(),
+      }
+    ],
+  },
+  {
     name: "Brownie And Muffins",
     uuid: uuid4(),
     data: [
@@ -234,6 +332,13 @@ const bakery = [
         price: 249,
         // description: "Rich and aromatic caffeine shot",
         image: "/assets/img/menu/bakery/BrownieAndMuffins/WalnutBrownie.jpeg",
+        uuid: uuid4(),
+      },
+      {
+        name: "Chocolate Almond Muffin",
+        price: 129,
+        // description: "Rich and aromatic caffeine shot",
+        image: "/assets/img/menu/bakery/BrownieAndMuffins/chocoAlmondMuffin.jpeg",
         uuid: uuid4(),
       },
       {

@@ -144,7 +144,7 @@ const gallery = () => {
         </div>
 
       </section>
-      <div style={{ maxWidth: '1600px', margin: '0 auto 35px 0' }}>
+      <div style={{ maxWidth: '1600px', margin: '0 auto 20px auto' }}>
   <Album />
 </div>
 
